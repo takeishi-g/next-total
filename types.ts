@@ -1,7 +1,7 @@
 import { HTMLInputTypeAttribute } from "react"
 
 export type InputType = {
-  type:  HTMLInputTypeAttribute 
+  type: HTMLInputTypeAttribute
 }
 
 export type NameSelectType = {
@@ -22,5 +22,15 @@ export type ButtonProps = {
 
   }
   title: string
-  onClick?: () => void
+  onClick: () => void
+}
+
+export type ButtonStyle = {
+  backGround: "bg-cyan-600" | "bg-rose-600"
+  hoverBackgrount: "hover:opacity-80"
+  boxShadow: "shadow-lg"
+  hoverBoxshadow: "hover:shadow-sm"
+  text: "text-white"
+  fontSize: "text-xs"
+  padding: "p-2"
 }
