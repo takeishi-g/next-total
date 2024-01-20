@@ -4,7 +4,7 @@ import { ChangeEvent, FC, InputHTMLAttributes, useState } from 'react'
 import tw from 'tailwind-styled-components'
 
 type Props = {
-  type?: 'text' | 'number' | 'select'
+  type?: 'text' | 'number' 
   onChange: (e: React.ChangeEvent<HTMLInputElement>)  =>  void
   value: string | string[]
 }

@@ -12,7 +12,6 @@ export type NameSelectType = {
 
 export type ButtonProps = {
   styles: {
-    borderColor: "border-b-cyan-800 border-r-cyan-800"
     backGround: "bg-cyan-600" | "bg-rose-600"
     hoverBackgrount: "hover:opacity-80"
     boxShadow: "shadow-lg"
