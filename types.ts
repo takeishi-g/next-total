@@ -34,3 +34,8 @@ export type ButtonStyle = {
   fontSize: "text-xs"
   padding: "p-2"
 }
+
+export type OptionType = {
+  value: string
+  label: string
+}

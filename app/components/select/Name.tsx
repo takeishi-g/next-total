@@ -1,6 +1,12 @@
-import { useState } from "react";
+import React, { useState, useContext, FC } from "react";
 import ReactSelect from "react-select";
 import tw from "tailwind-styled-components";
+import DataContext, { DataProvider } from "../context/context";
+import SingleValue from "react-select";
+import ActionMeta from "react-select";
+import { OptionType } from "@/types";
+
+
 
 const options = [
   { value: "中村", label: "中村" },
@@ -11,22 +17,27 @@ const options = [
   { value: "笹原", label: "笹原" },
 ];
 
-export const NameSelect = () => {
-  const [name, setName] = useState();
+type Props = {
+  onChange: (option : OptionType | null) => void
+  value?: string
+}
 
-  const handleSelectChange = () => {};
+export const NameSelect: FC<Props> = ({ onChange, value }) => {
+  
 
   return (
-    <Container>
-      <label htmlFor="name-select" className="my-auto flex-shrink-0">名前: </label>
-      <ReactSelect
-        id="name-select"
-        className="w-11/12"
-        options={options}
-        placeholder={"名前"}
-        onChange={handleSelectChange}
-      />
-    </Container>
+      <Container>
+        <label htmlFor="name-select" className="my-auto flex-shrink-0">
+          名前:{" "}
+        </label>
+        <ReactSelect
+          id="name-select"
+          className="w-11/12"
+          options={options}
+          placeholder={value}
+          onChange={onChange}
+        />
+      </Container>
   );
 };
 
@@ -35,4 +46,4 @@ export default NameSelect;
 export const Container = tw.div`
   flex
   gap-2
-`
+`;

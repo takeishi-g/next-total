@@ -1,11 +1,16 @@
+import React, { FC } from "react";
 import Input from "./Index";
 import tw from "tailwind-styled-components";
 
-export const UnmannedCheck = () => {
+type Props = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+export const UnmannedCheck: FC<Props> = ({ onChange }) => {
   return (
     <Container>
       <Label htmlFor="unmanned-check">無人: </Label>
-      <Input id={"unmanned-check"} type={"checkbox"} />
+      <Input id={"unmanned-check"} type={"checkbox"} onChange={onChange} />
     </Container>
   )
 }
