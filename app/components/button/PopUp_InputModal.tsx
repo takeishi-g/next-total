@@ -3,7 +3,6 @@ import Button from "./Index";
 
 const ButtonProps: ButtonProps = {
   styles: {
-    borderColor: "border-b-cyan-800 border-r-cyan-800",
     backGround: "bg-cyan-600",
     hoverBackgrount: "hover:opacity-80",
     boxShadow: "shadow-lg",
@@ -15,9 +14,15 @@ const ButtonProps: ButtonProps = {
   title: "図番を追加する",
 }
 
-export const PopUpInputButton = () => {
+type onClickProps = {
+  onClick: () => void
+}
+
+
+
+export const PopUpInputButton = ({onClick}: onClickProps) => {
   return(
-    <Button styles={ButtonProps.styles} title={ButtonProps.title}/>
+    <Button styles={ButtonProps.styles} title={ButtonProps.title} onClick={onClick}/>
   )
 }
 

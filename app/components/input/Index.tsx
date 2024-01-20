@@ -4,18 +4,24 @@ import { ChangeEvent, FC, InputHTMLAttributes, useState } from 'react'
 import tw from 'tailwind-styled-components'
 
 type Props = {
-  type?: 'text' | 'number' | 'select'
-  onChange: (e: React.ChangeEvent<HTMLInputElement>)  =>  void
-  value: string | string[]
+  id: string
+  type?: 'text' | 'number' | 'checkbox'
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>)  =>  void
+  value?: string | string[] | number
+  min?: number
+  step?: number
 }
 
 export const Input: FC<Props> = ({
+  id,
   type,
   value,
-  onChange
+  onChange,
+  min,
+  step
 }) => {
   return (
-    <InputContainer type={type} value={value} onChange={onChange}/>
+    <InputContainer id={id} type={type} value={value} onChange={onChange} min={min} step={step}/>
   )
 }
 
