@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Modal from "react-modal"
+import type { ButtonProps } from "@/types"
+import PopUpInputButton from "../button/PopUp_InputModal"
 
 const customStyles = {
   content: {
@@ -22,7 +24,7 @@ type Props = {
 }
 
 Modal.setAppElement("#main")
-export const ModalComponent = ({ children, title }: Props) => {
+export const ModalComponent = ({ children, title }: Props, {styles}: ButtonProps) => {
   const [ modal, setModal ] = useState(false)
 
   const openModal = () => {
@@ -35,7 +37,8 @@ export const ModalComponent = ({ children, title }: Props) => {
 
   return (
     <>
-    <button onClick={openModal}>{title}</button>
+    <PopUpInputButton onClick={openModal}/>
+    {/* <button onClick={openModal}>{title}</button> */}
     <Modal isOpen={modal} style={customStyles}>
       {children}
       <button onClick={closeModal}>閉じる</button>
