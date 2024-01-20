@@ -1,20 +1,18 @@
-import { useState } from "react";
+import React, { FC, useState } from "react";
 import Input from "./Index";
 import tw from "tailwind-styled-components";
 
-export const UnmannedTimeInput = () => {
-  const [ time, setTime ] = useState(0.25)
+type Props = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  value?: number
+}
 
-  const handleTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let cnageValue = Number(e.target.value)
-    setTime(cnageValue) 
-  }
-
-
+export const UnmannedTimeInput: FC<Props> = ({ onChange, value }) => {
+  
   return (
     <Container>
       <Label htmlFor="time-input">無人時間 H: </Label>
-      <Input id={"time-input"} value={time} type={"number"} min={0} step={0.25} onChange={handleTimeChange}/>
+      <Input id={"time-input"} value={value} type={"number"} min={0} step={0.25} onChange={onChange}/>
     </Container>
   );
 };

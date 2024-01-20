@@ -1,6 +1,15 @@
-import { useState } from "react";
-import ReactSelect from "react-select";
+import { OptionType } from "@/types";
+import { FC, useState } from "react";
+import ReactSelect, { ActionMeta } from "react-select";
+
 import tw from "tailwind-styled-components";
+
+type Props = {
+  onChange: (option: OptionType | null ) => void
+  value?: string
+}
+
+
 
 const options = [
   { value: "DR", label: "DR" },
@@ -9,10 +18,10 @@ const options = [
   { value: "細穴", label: "細穴" },
 ];
 
-export const TaskSelect = () => {
-  const [task, setTask] = useState(options[0].value);
 
-  const handleSelectChange = () => {}
+
+export const TaskSelect:FC<Props> = ({ onChange, value }) => {
+
 
   return (
     <Container>
@@ -21,8 +30,8 @@ export const TaskSelect = () => {
         id="task-select"
         className="my-auto"
         options={options}
-        placeholder={"工程"}
-        onChange={handleSelectChange}
+        placeholder={value}
+        onChange={onChange}
       />
     </Container>
   );

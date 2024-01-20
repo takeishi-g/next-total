@@ -7,7 +7,7 @@ type Props = {
   id: string
   type?: 'text' | 'number' | 'checkbox'
   onChange?: (e: React.ChangeEvent<HTMLInputElement>)  =>  void
-  value?: string | string[] | number
+  value?: string | string[] | number | boolean
   min?: number
   step?: number
 }
