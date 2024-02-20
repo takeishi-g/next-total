@@ -1,8 +1,8 @@
-import Header from "../../components/header/Index"
+import Header from "../../components/layouts/header/Index"
 
 export const AllList = () => {
   return (
-    <></>
+    <>Development Now...</>
   )
 }
 

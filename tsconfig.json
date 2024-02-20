@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/modal/FormInput.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Atoms/_Modal/ModalBody/index.tsx", "app/components/Molecules/Button_ModalClose/style.ts"],
   "exclude": ["node_modules"]
 }
