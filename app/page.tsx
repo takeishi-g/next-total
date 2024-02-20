@@ -1,10 +1,11 @@
-import MainContainer from "./components/container/Index";
+import HomeTemplate from "./components/Template/Home";
+
 
 export default function Home() {
  
   return (
     <>
-      <MainContainer />
+      <HomeTemplate />
     </>
   );
 }
