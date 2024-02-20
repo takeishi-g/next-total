@@ -1,5 +1,5 @@
 import { FC } from "react"
-import ButtonDefault from "../../Atoms/_Button"
+import React, { ButtonDefault } from "../../Atoms/_Button"
 
 export const InputListDeleteButton = ({ ...props }) => {
 

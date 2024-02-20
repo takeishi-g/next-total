@@ -1,5 +1,5 @@
 import { title } from "process"
-import { FC } from "react"
+import React, { FC } from "react"
 
 type Props = {
   name: string

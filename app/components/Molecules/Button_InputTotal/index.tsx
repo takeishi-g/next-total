@@ -1,4 +1,4 @@
-import ButtonDefault from "../../Atoms/_Button"
+import React, {ButtonDefault} from "../../Atoms/_Button"
 
 export const InputTotalButton = ({ ...props }) => {
   return (

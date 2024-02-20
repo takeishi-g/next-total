@@ -1,4 +1,6 @@
+import React from "react";
 import { Styled } from "./style";
+
 
 export const ButtonAddRow = ({...props}) => {
   console.log(props)
