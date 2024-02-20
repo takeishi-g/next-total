@@ -1,3 +1,4 @@
+import React from "react"
 import ModalBody from "./ModalBody"
 import { styled } from "styled-components"
 

@@ -1,3 +1,4 @@
+import React from "react"
 import Header from "../../components/layouts/header/Index"
 
 export const AllList = () => {

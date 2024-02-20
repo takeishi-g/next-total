@@ -1,3 +1,4 @@
+import React from "react";
 import { LabelDefault } from "../../Atoms/_Label";
 import { Styled } from "./style";
 

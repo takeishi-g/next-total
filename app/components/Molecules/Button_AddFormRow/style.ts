@@ -1,4 +1,4 @@
-import ButtonDefault from "../../Atoms/_Button";
+import React, {ButtonDefault} from "../../Atoms/_Button";
 import { styled } from "styled-components"
 
 export const Styled = styled(ButtonDefault)`

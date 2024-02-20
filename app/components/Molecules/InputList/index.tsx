@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import type { Input } from "../../organisms/InputModal";
 import InputListDeleteButton from "../Button_InputListDelete";
 import InputListUpdate from "../Button_InputUpdate";
